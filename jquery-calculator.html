@@ -77,20 +77,74 @@
 
 $(document).ready(function() {
 
-  
-  $(".number").click(function(){
-    console.log(this.value)
-  })
+  var num1='';
+  var num2='';
+  var operator= '';
+  var total= '';
 
-  $(".operator").click(function(){
-    console.log(this.value)
-    if(this.value ===  "times") {
-        this.value 
+  $('button').on('click', function(e) {
+    let btn = e.target.innerHTML;
+    if (btn >= '0' && btn <= '9') {
+      handleNumber(btn); 
+    } else {
+      handleOperator(btn)
     }
-  })
+  }); 
+
+   function handleNumber(num){
+     if (num1 === ''){
+       num1 = num;
+       console.log('hn 1 ran')
+
+     } else{ 
+       num2 = num;
+
+       console.log('hn 2 ran')
+     }}
+
+   function handleOperator(num){
+
+    
+}
+
+  
+  // $(".number").click(function(){
+  //   console.log(this.value)
+  // })
+
+  // $(".operator").click(function(){
+  //   console.log(this.value)
+  //   if(this.value ==  "times") {
+  //       this.value = "*";
+  //   }
+  //   if (this.value ==  "plus") {
+  //       this.value = "+";
+  //   } 
+  //   if(this.value ==  "minus") {
+  //       this.value = "-";
+  //   }
+  //   if(this.value ==  "divide") {
+  //       this.value = "/";
+  //   }
+  //   if(this.value ==  "power") {
+  //       this.value = "^";
+  //   }
 
 
-});
+ 
+
+  
+//   $(".operator").click(function(){
+//     console.log(this.value)
+    
+//   })
+
+
+
+
+
+
+// });
 
 // create reset function for clr btn
 
